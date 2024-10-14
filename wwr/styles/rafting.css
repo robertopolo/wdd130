@@ -7,6 +7,7 @@
 }
 
 *{
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
 }
@@ -18,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-p, a{
+p, a, figcaption{
     font-family: 'Montserrat', sans-serif;
     color: var(--secondary-color)
 }
@@ -34,14 +35,41 @@ html{
 }
 
 header{
-    height: 30dvh;
+    align-items: center;
+    align-content: center;
+    height: 20dvh;
     background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 5px solid var(--accent2-color);
+}
+
+header img{
+    height: auto;
+    width: 150px; 
+}
+
+header nav{
+    width: 90%;
+    display: flex;
+    font-weight: 500;
+}
+
+header nav a{
+    font-size: 18px;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+main{
+    background-color: #1B6DB6;
 }
 
 .hero{
     position: relative;
     text-align: center;
-    height: 70dvh;
+    height: 80dvh;
     overflow: hidden;
 }
 
@@ -79,16 +107,95 @@ h1{
 
 .hero article img{
     float: right;
-    width: 225px;
     margin-left: 20px;
+    width: 225px;
 }
 
-footer{
+.history{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.history .content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.history p {
+    color: var(--floral-white);
+    width: 65%;
+    margin: 0;
+}
+
+.history img {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 5%;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-bottom: 10px solid var(--accent2-color);
+}
+
+.gallery h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.gallery .content{
+    display: grid;
+    margin: auto;
+    margin-bottom: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    }
+
+.gallery figcaption{
+    color: var(--floral-white);
+    text-align: center;
+    font-weight: 400;
+}
+
+.gallery img{
+    width: 90%;
+    height: auto;
+}
+
+footer {
+    align-items: center;
     background-color: var(--accent1-color);
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.footer-images {
+    display: flex;
+    gap: 10px;
 }
 
 footer p{
-    color: var(--floral-white);
+    color: var(--floral-white);  
 }
 
 footer a img{
