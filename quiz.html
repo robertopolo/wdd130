@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/quiz.css" />
+    <title>WDD 130 | Roberto Polo | Form quiz</title>
+  </head>
+  <body>
+    <header>
+      <h1>WDD 130 | Quiz - HTML and CSS</h1>
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <div class="form-item columns">
+            <label for="q1">What does the acronymus CSS stand for?</label>
+            <input type="text" name="q1" id="q1" />
+          </div>
+          <div class="form-item columns">
+            <label for="q1"
+              >How are id and class attributes selected in CSS?</label
+            >
+            <textarea name="q2" id="a2"></textarea>
+          </div>
+          <div class="form-item columns">
+            <label for="q3">Which the following is a valid CSS comment?</label>
+            <select name="q3" id="q3">
+              <option value="" selected disabled>Choose one...</option>
+              <option value="opt1">&lt;!-- code --&gt;</option>
+              <option value="opt2">/* code */</option>
+            </select>
+          </div>
+          <div class="form-item columns">
+            <label for="q4">How many h1 tags can a webpage have?</label>
+            <input type="number" name="q4" id="q4" />
+          </div>
+        </fieldset>
+        <button type="submit">Submit quiz</button>
+      </form>
+    </main>
+  </body>
+</html>
