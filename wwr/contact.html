@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is an contact page for the Whitewaters Rafting Site"
+    />
+    <meta name="author" content="Roberto Polo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/rafting.css" />
+    <title>Contact us - Rapids</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/rapids-logo.webp" alt="rapids-logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="information-container">
+          <h2>Contact information</h2>
+          <p><strong>Address:</strong> Kr 100C#129C-17 - Bogotá, Colombia</p>
+          <p><strong>Phone:</strong> (+57) 123-456-7890</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="#">contact@rapids.com</a>
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1182.1469509083365!2d-74.09061991169857!3d4.726141263746295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84c298049e67%3A0x5aae58d918c6a430!2sLa%20Iglesia%20de%20Jesucristo%20de%20los%20Santos%20de%20los%20%C3%9Altimos%20D%C3%ADas!5e0!3m2!1ses-419!2sco!4v1729647845462!5m2!1ses-419!2sco"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <section>
+        <div class="team-container">
+          <h2>Our team</h2>
+          <div class="team-pic-container">
+            <figure>
+              <img src="../wwr/images/owner-pic.webp" alt="owner-pic" />
+              <figcaption>Owner</figcaption>
+            </figure>
+            <figure>
+              <img src="../wwr/images/manager-pic.webp" alt="manager-pic" />
+              <figcaption>Manager</figcaption>
+            </figure>
+            <figure>
+              <img src="../wwr/images/guide-pic.webp" alt="guide-pic" />
+              <figcaption>Guide</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="contact-container">
+          <h2>Contact us</h2>
+          <form>
+            <fieldset>
+              <div class="form-items-1">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                />
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your email address"
+                />
+              </div>
+              <div class="">
+                <label>Purpose of message:</label>
+                <label
+                  ><input
+                    type="radio"
+                    id="general-inquiry"
+                    name="purpose"
+                    value="General Inquiry"
+                    required
+                  />
+                  General Inquiry</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    id="reservation-question"
+                    name="purpose"
+                    value="Reservation Question"
+                  />
+                  Reservation Question</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    id="website-suggestion"
+                    name="purpose"
+                    value="Website Suggestion"
+                  />
+                  Website Suggestion</label
+                >
+              </div>
+              <div class="form-items-3">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 | 🌊 Rapids 🌊 | Roberto Polo</p>
+      <a
+        href="https://app.moqups.com/zQ7pwBPBA3fQuLnG9tOwM4gx5lq1HUTu/view/page/a8b49fd9f"
+        target="_blank"
+        >Wireframe</a
+      >
+      <div class="footer-images">
+        <a href="https://facebook.com">
+          <img src="images/facebook-logo.svg" alt="facebook-logo" />
+        </a>
+        <a href="https://instagram.com">
+          <img src="images/instagram-logo.svg" alt="instagram-logo" />
+        </a>
+        <a href="https://x.com">
+          <img src="images/x-logo.svg" alt="x-logo" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
