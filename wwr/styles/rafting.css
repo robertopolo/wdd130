@@ -8,11 +8,12 @@
 
 *{
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
 html{
+    background-color: var(--accent2-color);
     font-size: 62.5%;
 }
 
@@ -40,14 +41,13 @@ a{
 }
 
 header{
+    display: flex;
     align-items: center;
-    align-content: center;
-    height: 20dvh;
+    justify-content: space-between;
+    height: 20vh;
     background-color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    border-bottom: 0.5rem solid var(--accent2-color);
-}
+    border-bottom: 1rem solid var(--accent2-color);
+}  
 
 header img{
     height: auto;
@@ -55,13 +55,15 @@ header img{
 }
 
 header nav{
-    width: 90%;
     display: flex;
-    font-weight: 500;
+    gap: 1rem;
+    justify-content: space-around;
+    width: 40%;
 }
 
 header nav a{
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: bold;
     width: 100%;
     margin: 1rem;
     text-align: center;
@@ -71,17 +73,57 @@ main{
     background-color: var(--secondary-color);
 }
 
-.hero{
-    position: relative;
-    text-align: center;
-    height: 80dvh;
-    overflow: hidden;
+section{
+    padding: 2rem;
 }
 
-.hero img{
-    display: block;
-    width: 100%;
-    height: auto;
+main p{
+    color: var(--floral-white);
+}
+
+form{
+    margin: 0 auto;
+    width: 70%;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    display: grid;
+    font-size: 1.5rem;
+}
+
+fieldset{
+    border: 0;
+    display: grid;
+    grid-gap: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 95%;
+}
+
+label, input, button, select, textarea{
+    color: var(--secondary-color);
+    font-family: Poppins;
+}
+
+label{
+    padding-right: 1rem;
+}
+
+input, textarea{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+button{
+    margin: 0.8rem;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.3rem;
 }
 
 h1{
@@ -92,6 +134,40 @@ h1{
     width: 100%;
     height: 6.5rem;
     text-transform: uppercase;
+}
+
+footer {
+    align-items: center;
+    background-color: var(--accent1-color);
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+footer p{
+    color: var(--floral-white);  
+}
+
+footer a img{
+    width: 3.5rem;
+    height: auto;
+}
+
+.hero{
+    align-items: center;
+    display: flex;
+    height: 80dvh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .hero article{
@@ -122,6 +198,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
 }
 
 .history h2{
@@ -164,53 +241,115 @@ h1{
 }
 
 .gallery-content{
-    display: grid;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    justify-items: center;
     align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.gallery-content figure{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .gallery figcaption{
     color: var(--floral-white);
-    text-align: center;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-.gallery img{
-    width: 90%;
+.gallery-content img {
+    border-radius: 0.5rem;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
 }
 
-footer {
+.landscape{
     align-items: center;
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
     display: flex;
-    height: 9rem;
-    justify-content: space-between;
-    padding: 2rem;
+    height: 45rem;
+}
+
+.landscape-img{
+    border-radius: 0.5rem;
+    height: 100%;
+    overflow: hidden;
     position: relative;
+    width: 80%;
+}
+
+.landscape-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.landscape-text{
+    background-color: #bebebee7;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    justify-content: center;
+    padding: 1rem;
+    position: absolute;
+    right: 3rem;
+    width: 50%;
+}
+
+.caption-trips{
+    align-items: center;
+    border-bottom: 0.1rem solid #bebebee7;;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    height: 20rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: justify;
+    width: 80%;
+}
+
+.trips{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    margin: 0 auto;
+    padding: 2rem;
+    width: 80%;
+}
+
+.trip-item{
+    align-items: center;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
     width: 100%;
 }
 
-.footer-images {
-    display: flex;
-    gap: 1rem;
-}
-
-footer p{
-    color: var(--floral-white);  
-}
-
-footer a img{
-    width: 3.5rem;
+.trip-item img {
+    border-radius: 0.5rem;
     height: auto;
+    max-height: 15rem;
+    max-width: 100%;
 }
 
-section{
-    padding: 2rem;
+.trip-item figcaption{
+    color: var(--floral-white);
+    margin: 1rem;
 }
 
 .information-container, .team-container, .contact-container{
@@ -218,6 +357,7 @@ section{
     border-radius: .5rem;
     display: block;
     height: 40rem;
+    margin: 0 auto;
     padding: 2rem;
     width: 80%;
 }
@@ -264,38 +404,6 @@ section{
     margin: 1rem;
 }
 
-form{
-    margin: 0 auto;
-    width: 70%;
-    border: 1px solid var(--primary-color);
-    border-radius: 0.5rem;
-    display: grid;
-    font-size: 1.5rem;
-}
-
-fieldset{
-    border: 0;
-    display: grid;
-    grid-gap: 0.5rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-label, input, button, select, textarea{
-    color: var(--secondary-color);
-    font-family: Poppins;
-}
-
-label{
-    padding-right: 1rem;
-}
-
-input, textarea{
-    padding: 0.5rem;
-    font-size: 1.2rem;
-}
-
 .form-items-1{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr;
@@ -321,14 +429,7 @@ input, textarea{
     resize: none;
 }
 
-button{
-    margin: 0.8rem;
-    background-color: var(--primary-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    font-size: 1.3rem;
+.footer-images {
+    display: flex;
+    gap: 1rem;
 }
